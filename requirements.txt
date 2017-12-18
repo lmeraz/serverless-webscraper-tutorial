@@ -1,2 +1,4 @@
-Flask
+requests
 zappa
+boto3
+lxml

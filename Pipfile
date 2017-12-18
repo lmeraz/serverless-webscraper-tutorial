@@ -8,7 +8,6 @@ name = "pypi"
 [packages]
 
 zappa = "*"
-flask = "*"
 
 
 [dev-packages]
