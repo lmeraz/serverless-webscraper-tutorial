@@ -8,6 +8,7 @@ name = "pypi"
 [packages]
 
 zappa = "*"
+lxml = "*"
 
 
 [dev-packages]
