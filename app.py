@@ -1,3 +1,4 @@
+# TODO figure out how to get env variables from zappa_settings locally and on prod
 import requests
 from lxml import html
 import os
@@ -29,9 +30,6 @@ table = dynamodb.Table(TABLE)
 
 
 def scrape(time):
-    '''
-    Scraper
-    '''
     html_doc = get_html(url=TARGET_URL, proxies=PROXY, timeout=TIMEOUT,
         headers=HEADER)
     titles = find_elements(html_doc, TITLE_QUERY)
@@ -40,9 +38,9 @@ def scrape(time):
     utterances = find_elements(html_doc, UTTERANCE_QUERY)
     hrefs = find_elements(html_doc, HREF_QUERY)
     imgs = find_elements(html_doc, IMG_QUERY)
-    items = [{"date": time, "productID":val[4][4:], "title":val[0],
-    "final_price":val[1], "buy_price":val[2],
-    "utterance":val[3], "href":val[4], "img":val[5]} for val in zip(titles,
+    items = [{"Date": time, "ProductID":val[4][4:], "Title":val[0],
+    "FinalPrice":val[1], "BuyPrice":val[2],
+    "Utterance":val[3], "HREF":val[4], "IMG":val[5]} for val in zip(titles,
     final_prices, buy_prices, utterances, hrefs, imgs)]
     return items
 
@@ -54,9 +52,8 @@ def get_html(url, proxies, timeout, headers):
     return html.fromstring(page.content)
 
 def write_to_dynamo(items, table):
-    with table.batch_writer() as batch:
-        for item in items:
-            batch.put_item(Item=item)
+    for item in items:
+        table.put_item(Item=item)
 
 def main():
     data = scrape(str(datetime.now()))

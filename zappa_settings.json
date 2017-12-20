@@ -5,19 +5,5 @@
        "function": "app.lambda_handler",
        "expression": "rate(1 day)"
     }],
-    "environment_variables": {
-            "target_url": "https://www.amazon.com/b?node=16924218011",
-            "proxy": {"http": "http://202.159.203.71:80"},
-            "timeout": "5",
-            "header": {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"},
-            "container_query": "",
-            "title_query": "//span[@class='title']/text()",
-            "final_price_query": "",
-            "buy_price_query": "//span[@class='buy-price']/text()",
-            "utterance_query": "//span[@class='golden-utterance-content']/text()",
-            "href_query": "//a/@href",
-            "img_query": "//img/@src",
-            "table": "AlexaVoiceShoppingOffers",
-        }
   }
 }
