@@ -7,12 +7,12 @@ import boto3
 import ast
 
 # Request constants
-TARGET_URL = os.environ['target_url']  # Target url of to scrape
+TARGET_URL = os.environ['target_url']  # Target url to scrape
 PROXY = ast.literal_eval(os.environ['proxy'])  # Proxy to use
 TIMEOUT = int(os.environ['timeout'])  # Timeout to use
 HEADER = ast.literal_eval(os.environ['header']) # Header to use
 
-# Query Constants
+# Query constants
 CONTAINER_QUERY = os.environ['container_query']
 TITLE_QUERY = CONTAINER_QUERY + os.environ['title_query']
 FINAL_PRICE_QUERY = CONTAINER_QUERY + os.environ['final_price_query']
@@ -21,7 +21,7 @@ UTTERANCE_QUERY = CONTAINER_QUERY + os.environ['utterance_query']
 HREF_QUERY = CONTAINER_QUERY + os.environ['href_query']
 IMG_QUERY = CONTAINER_QUERY + os.environ['img_query']
 
-# DynamoDB Constants
+# DynamoDB constants
 TABLE = os.environ['table']
 
 # Services
