@@ -47,4 +47,4 @@ You're ready to rock!
 ```
 zappa deploy dev
 ```
-All done!
+Finally, add the environment variables in the lambda console.
