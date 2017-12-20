@@ -35,8 +35,11 @@ table = MyTableName
 ```
 ### Create AWS Resources
 Create a DynamoDB Table with a Date and ProductID string hash and sort key
+
 In .env replace MyTableName with your table name
+
 Create an S3 Bucket
+
 In zappa_settings.json replace serverless-webscraper-619 with your bucket name
 
 ### Deploy
