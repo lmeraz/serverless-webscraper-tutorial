@@ -1,6 +1,6 @@
 {
   "dev": {
-    "s3_bucket": "serverless-webscraper-619",
+    "s3_bucket": "my-bucket-name",
     "events": [{
        "function": "app.lambda_handler",
        "expression": "rate(1 day)"
