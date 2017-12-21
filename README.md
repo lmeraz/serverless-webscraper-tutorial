@@ -5,12 +5,11 @@ Scrape the Amazon [Alexa Voice Deals](https://www.amazon.com/b?node=16924218011)
 [AWS CLI](https://aws.amazon.com/cli/)  
 [pipenv](https://docs.pipenv.org/)  
 [AWS DynamoDB](https://aws.amazon.com/dynamodb/)  
-[AWS S3](https://aws.amazon.com/s3/)
-[zappa](https://github.com/Miserlou/Zappa)
-[requests](http://docs.python-requests.org/en/master/)
-[lxml](http://lxml.de/)
+[AWS S3](https://aws.amazon.com/s3/)  
+[zappa](https://github.com/Miserlou/Zappa)  
+[requests](http://docs.python-requests.org/en/master/)  
+[lxml](http://lxml.de/)  
 [boto3](https://boto3.readthedocs.io/en/latest/)
-
 ### Set Up
 Tutorial assumes AWS CLI is installed and credentials are properly set up in `~/.aws/credentials`.
 Tutorial also assumes S3, API Gateway, DynamoDB, and Lambda are available in the region specified in `~/.aws/config`. See [Configuring the AWS CLI](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) for more details.
