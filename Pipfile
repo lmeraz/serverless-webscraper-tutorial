@@ -9,6 +9,8 @@ name = "pypi"
 
 zappa = "*"
 lxml = "*"
+"boto3" = "*"
+requests = "*"
 
 
 [dev-packages]
