@@ -1,9 +1,9 @@
 # A Serverless Webscraping Tutorial
-Scrape the Amazon Alexa Voice Deals meta data on a daily basis using a serverless infrastructure.
+Scrape the Amazon [Alexa Voice Deals](https://www.amazon.com/b?node=16924218011) meta data on a daily basis using a serverless infrastructure.
 
 ### Set Up
 Tutorial assumes AWS CLI is installed and credentials are properly set up in `~/.aws/credentials`.
-Tutorial also assumes S3, API Gateway, DynamoDB, and Lambda are available in the region found in `~/.aws/config`. See (Configuring the AWS CLI)[http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html] for more details.
+Tutorial also assumes S3, API Gateway, DynamoDB, and Lambda are available in the region found in `~/.aws/config`. See [Configuring the AWS CLI](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) for more details.
 ### Install pipenv
 If you haven't already, pip install pipenv. It's awesome!
 ```
@@ -66,4 +66,4 @@ Deploy the module
 ```
 zappa deploy dev
 ```
-Finally, set up set up the environment variables in the AWS Lambda console.
+Finally, set up set up the [environment variables](http://docs.aws.amazon.com/lambda/latest/dg/env_variables.html) in the AWS Lambda console.
