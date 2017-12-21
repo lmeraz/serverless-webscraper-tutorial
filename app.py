@@ -30,8 +30,7 @@ table = dynamodb.Table(TABLE)
 
 
 def scrape(time):
-    html_doc = get_html(url=TARGET_URL, proxies=PROXY, timeout=TIMEOUT,
-        headers=HEADER)
+    html_doc = get_html(url=TARGET_URL, proxies=PROXY, timeout=TIMEOUT, headers=HEADER)
     titles = find_elements(html_doc, TITLE_QUERY)
     final_prices = find_elements(html_doc, FINAL_PRICE_QUERY)
     buy_prices = find_elements(html_doc, BUY_PRICE_QUERY)
@@ -74,5 +73,4 @@ def lambda_handler(event, context):
         print('Scrape complete at {}'.format(str(datetime.now())))
 
 if __name__ == "__main__":
-    """ This is executed when run from the command line """
     main()
